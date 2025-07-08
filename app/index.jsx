@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import  './global.css'
 
 const index = () => {
   return (
-    <View style={{flex:1, justifyContent :'center' , alignItems :'center'}}>
-      <Text >index page</Text>
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-xl font-bold text-blue-500">
+        Welcome to Nativewind!
+      </Text>
     </View>
   )
 }
