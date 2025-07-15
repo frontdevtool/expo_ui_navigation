@@ -11,12 +11,12 @@ const HomeScreen = () => {
   return (
     <View className="flex-1 justify-center items-center gap-10">
       <Text>HomeScreen</Text>
-      <Button mode="contained" onPress={() => navigation.navigate("profile")} >
+      {/* <Button mode="contained" onPress={() => navigation.navigate("profile",{name : 'kazem'})} >
         Go to Profile
       </Button>
-      <Button mode="contained" onPress={() => navigation.navigate("settings")} >
+      <Button mode="contained" onPress={() => navigation.navigate("settings" , {name : 'sami'})} >
         Go to settings
-      </Button>
+      </Button> */}
     </View>
   );
 };

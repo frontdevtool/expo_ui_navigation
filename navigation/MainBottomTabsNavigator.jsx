@@ -6,11 +6,16 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Feather from "@expo/vector-icons/Feather";
 import MainStackNavigator from "./MainStackNavigator";
+import MainTopTabNavigator from "./MainTopTabNavigator";
 const BottomTabs = () => {
   const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
+
+    initialRouteName="settings"
+    
       screenOptions={{
+        
         headerTitleAlign: "center",
         //  headerShown: false,
         tabBarActiveTintColor: "blue",
@@ -38,7 +43,8 @@ const BottomTabs = () => {
       <Tab.Screen
         name="profile"
         // component={ProfileScreen}
-        component={MainStackNavigator}
+        // component={MainStackNavigator}
+        component={MainTopTabNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <AntDesign name="profile" size={24} color={color} />
@@ -53,7 +59,9 @@ const BottomTabs = () => {
           tabBarIcon: ({ color }) => (
             <Feather name="settings" size={24} color={color} />
           ),
+          
         }}
+
       />
     </Tab.Navigator>
   );
