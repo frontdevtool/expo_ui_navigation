@@ -5,7 +5,7 @@ import FoodLogo from '@/assets/FoodLogo'
 export default function WelcomScreen() {
   return (
     <View>
-     <FoodLogo/>
+
     </View>
   )
 }

@@ -1,22 +1,32 @@
-import { View, Text } from "react-native";
-import { Button } from 'react-native-paper';
+import * as React from "react";
+import {StyleSheet, Text, View } from "react-native";
 
+import { SegmentedButtons } from "react-native-paper";
+
+import MainBottomTabsNavigator from '../navigation/MainBottomTabsNavigator'
 import "./global.css";
-import WelcomScreen from "@/screens/WelcomScreen";
 import { SafeAreaView } from "react-native-safe-area-context";
-export default function index() {
+import MainStackNavigator from "@/navigation/MainStackNavigator";
+import MainDrawerNavigator from "@/navigation/MainDrawerNavigator";
+const index = () => {
+  return (
+  
+  
+  <>
+        <MainBottomTabsNavigator/>
+        {/* <MainStackNavigator/> */}
+        {/* <MainDrawerNavigator/> */}
 
-
-return (
-<View className="">
-    <Text>index</Text>
+  </>
    
-    <Button icon="account-arrow-down" mode="contained" onPress={()=> console.log('Pressed')}>
-        Press me
-    </Button>
+  );
+};
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+  },
+});
 
-
-</View>
-);
-}
+export default index;
